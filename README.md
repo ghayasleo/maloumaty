@@ -18,7 +18,7 @@
 
 ## logged-in-nav.php
 
-- File To Replace: [logged-in-nav.php](https://limegreen-chinchilla-690185.hostingersite.com/wp-admin/theme-editor.php?file=template-parts%2Fheader%2Fpartials%2Flogged-in-nav.php&theme=houzez)
+- File To Replace: [logged-in-nav.php](https://www.maloumaty.com/wp-admin/theme-editor.php?file=template-parts%2Fheader%2Fpartials%2Flogged-in-nav.php&theme=houzez)
 
 - File To Overwrite: [logged-in-nav.php](/logged-in-nav.php)
 
