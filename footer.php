@@ -27,16 +27,17 @@ do_action( 'houzez_after_footer' );
 do_action( 'houzez_before_wp_footer' );
 ?>
 <script>
-const listingInterval = setInterval(function() {
+const listingIntervalBeta = setInterval(function() {
     if (jQuery("body.is-logged-in.is-admin .item-listing-wrap, body.is-logged-in.is-active .item-listing-wrap").length === 0) {
         jQuery('.hz-item-gallery-js').each(function() {
             var $this = jQuery(this);
             var listing_slider = $this.find('.houzez-listing-carousel');
-            if (!listing_slider.hasClass('slick-reslicked') && listing_slider.slick) {
+            if (!listing_slider.hasClass('slick-reslicked') && !!listing_slider.slick) {
                 listing_slider.slick('unslick');
-                $this.find(".item:nth-child(n+4)").remove();
-                const link = $this.find(".item-title a").attr("href")
-                $this.find(".item:last-child").after(`<div class="item view-more-link"><a href="${link}">Click to see all images</a></div>`);
+                $this.find(".slide-img:nth-child(n+4)").remove();
+                const link = $this.find(".slide-img a").attr("href")
+                $this.find(".slide-img:last-child").after(`<div class="item view-more-link"><a href="${link}">Click to see all images</a></div>`);
+                console.log("ggg")
                 listing_slider.slick({
                     rtl: false,
                     autoplay: false,
@@ -53,7 +54,7 @@ const listingInterval = setInterval(function() {
             }
         })
     } else {
-        clearInterval(listingInterval);
+        clearInterval(listingIntervalBeta);
     }
 })
 </script>
